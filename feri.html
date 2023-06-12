@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            h1 {text-align: center;}
+            p {text-align: center;}
+            div {text-align: center;
+                background-image: url('questionmark.jpg');}
+    
+            .container {
+                display: flex;
+                justify-content: center;
+            }
+    
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+    
+            .button2 {background-color: #008CBA;} /* Blue */
+            .button3 {background-color: #f44336;} /* Red */ 
+            .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+            .button5 {background-color: #555555;} /* Black */
+        </style>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="alert alert-primary" style="background-color: aquamarine;">
+        <h1 style="color:black;">Mari Menguji minda :</h1>
+        <form action="ujiminda.php" method="post">
+            <label for="object"> Sila Pilih Dengan Betul :</label><br>
+            <img src="feri.png"width="200">
+            <select id="object" name="object">
+              <option value="object1">FE FE</option>
+              <option value="object2">RI RI</option>
+              <option value="object3">FE RI</option>
+              <option value="object4">RI FE</option>
+            </select>
+            <br><br>
+            <input type="button" name="submit" value="Submit" onclick="showPopup()">
+        </form>
+        </div>
+
+        <script>
+            function showPopup() {
+                var isTrue = false;
+                var selectedObject = document.getElementById("object").value;
+                if (selectedObject === "object3") {
+                    isTrue = "Betul!";
+                    window.location.href = "gajah.html";
+                } else {
+                    isTrue = "Salah!";
+                    alert("OH! TIDAK JAWAPAN ANDA : " + isTrue);
+                }
+            }
+        </script>
+    </body>
+</html>
